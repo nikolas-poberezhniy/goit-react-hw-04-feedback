@@ -3,9 +3,6 @@ import PropTypes from 'prop-types';
 
 export const Statistics = data => {
   return Object.keys(data).map(e => {
-    //костыль для того, чтобы соответствовало макету, так как, я
-    //названия ключей пропросов использую в верстке, а positivePercentage
-    //единственный выбивается
     if (e === 'positivePercentage') {
       return (
         <StatisticsItem key={e}>Positive feedback: {data[e]}%</StatisticsItem>
